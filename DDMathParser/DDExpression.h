@@ -17,7 +17,7 @@ typedef enum {
 @class DDMathEvaluator, DDParser;
 
 @interface DDExpression : NSObject <NSCoding> {
-    DDExpression *_parentExpression;
+    __weak DDExpression *_parentExpression;
 }
 
 @property (nonatomic, readonly) DDExpression *parentExpression;
